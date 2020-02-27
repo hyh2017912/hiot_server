@@ -1,0 +1,57 @@
+spring:
+  #application:name: test
+  http.encoding:
+    charset: UTF-8
+    force: false
+  profiles:
+    active: dev
+
+#logging:
+#  config: classpath:log4j2.xml
+
+#logging:
+#  config:classpath:log4j2.xml
+#  level:
+#    com.viewhigh.hiot.* : TRACE
+#    org.springframework.boot.autoconfigure: ERROR
+#    org.springframework.beans.factory.*: ERROR
+#    org.springframework.web: ERROR
+#    io.lettuce.core.* : ERROR
+#    io.netty.util.* : ERROR
+#    io.netty.channel.nio.* : ERROR
+#    org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator: ERROR
+#    org.springframework.boot.context.logging.ClasspathLoggingApplicationListener : ERROR
+#    org.springframework.data.repository.config.RepositoryConfigurationDelegate: ERROR
+#    org.hibernate.service.* : ERROR
+#    org.hibernate.internal.*  : ERROR
+#    org.hibernate.type.BasicTypeRegistry : ERROR
+#    org.hibernate.validator.internal.engine.ValidatorFactoryImpl: ERROR
+#    org.hibernate.cfg.* : ERROR
+#    org.hibernate.id.factory.internal.* : ERROR
+#    org.hibernate.boot.registry.selector.internal.* : ERROR
+#    org.springframework.boot.web.servlet.filter.* : ERROR
+#    root : ERROR
+#
+#debug:
+#  false
+#  redis配置
+  redis:
+    host: 192.168.9.253
+#    host: 106.12.82.151
+    port: 6379
+    password: Redis_00_hiot
+    # Redis默认情况下有16个分片，这里配置具体使用的分片，默认是0
+    database: 1
+    # 连接超时时间（毫秒）
+    timeout: 60s  # 数据库连接超时时间，2.0 中该参数的类型为Duration，这里在配置的时候需要指明单位
+    # 连接池配置，2.0中直接使用jedis或者lettuce配置连接池
+    lettuce:
+      pool:
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 600
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 50
+        # 等待可用连接的最大时间，负数为不限制
+        max-wait:  60s
+        # 连接池最大连接数（使用负值表示没有限制 -1） 默认 8
+        max-active: -1
