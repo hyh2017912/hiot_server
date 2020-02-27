@@ -40,7 +40,7 @@
                     <artifactId>lettuce-core</artifactId>
                 </exclusion>
             </exclusions>
-            <version>4.1.6.Final</version>  <!--用这个版本，5以上不能用，该版本一下不能用，其它未测-->
+            <version>4.1.42.Final</version>  <!--用这个版本，5以上不能用，该版本一下不能用，其它未测-->
         </dependency>
         <!-- core是classice的基础，要运行classsic，必须要用到core  -->
         <!--<dependency>-->
